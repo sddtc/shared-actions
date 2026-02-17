@@ -2,9 +2,6 @@ name: Reusable workflow about github auto-merge
 
 on:
   workflow_call:
-    secrets:
-      PAT_TOKEN:
-        required: true
 
 jobs:
   reusable_workflow_job_auto-merge:
