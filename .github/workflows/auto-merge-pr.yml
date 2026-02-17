@@ -9,7 +9,7 @@ on:
 jobs:
   reusable_workflow_job_auto-merge:
     runs-on: ubuntu-latest
-    if: ${{ github.event.pull_request.draft == false && github.actor == 'dependabot[bot]' }}
+    if: ${{ github.event.pull_request.draft == false && github.event.pull_request.user.login == 'dependabot[bot]' }}
     steps:
       - name: Approve a PR
         run: gh pr review --approve "$PR_URL"
